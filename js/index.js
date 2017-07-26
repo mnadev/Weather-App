@@ -15,7 +15,8 @@ $(document).ready( function() {
 			var hourlySummary = jsonWeather.hourly.summary; //weather summary i.e "partly cloudy with a chance of rain, etc."
 
 			var dateObj = new Date(); //create new date object
-			var date = dateObj.getHours() + ":" + dateObj.getMinutes() + " " + dateObj.getMonth() + " " + dateObj.getDate(); //get hours, min, day, month
+			var monthArr = ["January", "February" , "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			var date = dateObj.getHours() + ":" + dateObj.getMinutes() + " " + monthArr[dateObj.getMonth()] + " " + dateObj.getDate(); //get hours, min, day, month
 			var isFahrenheit = true; //create variable to check if temp is in fahrenheit or celcius
 
 			var body  = document.getElementsByTagName("body")[0]; //access body element
