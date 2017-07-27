@@ -1,55 +1,113 @@
 <!DOCTYPE html>
 <html >
-<head>
-  <meta charset="UTF-8">
-  <title>Weather App</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
 
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+    <div class = "container main">
+
+      <div class = "row">
+
+        <div class="jumbotron col-lg-12 col-md-12 col-sm-12" id="header">
+
+          <h1>
+          Weather App
+          </h1>
+
+        </div>
+
+      </div>
 
 
-</head>
+      <div class = "jumbotron container">
 
-<body>
-  <html>
-	<title>
-		weatherJS
-	</title>
+        <h4>
+          <div class = "col-lg-2 col-md-2 col-sm-2 data" id = "date">Date</div>
+          <div class = "col-lg-4 col-md-4 col-sm-4 data" id = "temp">Temp</div>
+          <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "weather">Weather</div>
+          <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "humidity">Humidity</div>
+          <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "precip">Precip</div>
+        </h4>
 
-	<body>
-		<div class = "container flexbox">
-			<div class = "row" id = "main">
-				<div class="jumbotron col-md-12 col-sm-12" id="header" height = "20%">
-					<h1>
-						Weather App
-					</h1>
-				</div>
-				<div class = "jumbotron">
-					<div class = "col-md-12 col-sm-12 bg-primary" id = "date">Date</div>
-					<div class = "col-md-12 col-sm-12 bg-success" id = "temp">Temp</div>
-					<div class = "col-md-12 col-sm-12 bg-warning" id = "weather">Weather</div>
-					<div class = "col-md-12 col-sm-12 bg-info" id = "humidity">Humidity</div>
-					<div class = "col-md-12 col-sm-12 bg-danger" id = "precip">Precip</div>
+        <div class = "col-lg-8 col-md-8 col-sm-8">
 
-					<div class = "col-md-8 col-sm-8">
-						<button class = "btn btn-primary" id = "celcius">C</button>
+          <button class = "btn btn-primary" id = "celcius">C</button>
 
-						<button class = "btn btn-secondary" id = "fahr">F</button>
+          <button class = "btn btn-success" id = "fahr">F</button>
 
-						<button class = "btn btn-warning" id = "hourly">H</button>
+        </div>
+
+      </div>
+
+
+      <div class = "jumbotron container">
+
+        <h1 class= "col-lg-9 col-md-9 col-sm-9">Next 6 Hours:</h1>
+
+        <button class = "btn btn-warning col-lg-3 col-md-3 col-sm-3 " id = "hourly">H</button>
+
+        <div class = "row col-lg-12 col-md-12 col-sm-12" id = "hr">
+
+          <div class = "table-responsive col-lg-2 col-md-2 col-sm-2">
+						<strong> <div class = "hour1"></div> </strong>
+						<div class = "temp1"></div>
+						<div class = "summary1"></div>
+						</br>
 					</div>
-				</div>
-			</div>
-		</div>
-	</body>
 
-</html>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script src="js/config.js"></script>
-  <script src="js/index.js"></script>
+					<div class = "table-responsive col-lg-2 col-md-2 col-sm-2">
+						<strong> <div class = "hour2"></div> </strong>
+						<div class = "temp2"></div>
+						<div class = "summary2"></div>
+						</br>
+					</div>
 
-</body>
+					<div class = "table-responsive col-lg-2 col-md-2 col-sm-2">
+						<strong> <div class = "hour3"></div> </strong>
+						<div class = "temp3"></div>
+						<div class = "summary3"></div>
+						</br>
+					</div>
+
+					<div class = "table-responsive col-lg-2 col-md-2 col-sm-2">
+						<strong> <div class = "hour4"></div> </strong>
+						<div class = "temp4"></div>
+						<div class = "summary4"></div>
+						</br>
+					</div>
+
+					<div class = "table-responsive col-lg-2 col-md-2 col-sm-2">
+						<strong> <div class = "hour5"></div> </strong>
+						<div class = "temp5"></div>
+						<div class = "summary5"></div>
+						</br>
+					</div>
+
+					<div class = "table-responsive col-lg-2 col-md-2 col-sm-2">
+						<strong> <div class = "hour6"></div> </strong>
+						<div class = "temp6"></div>
+						<div class = "summary6"></div>
+						</br>
+					</div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="js/config.js"></script>
+    <script src="js/index.js"></script>
+
+  </body>
 </html>
