@@ -18,7 +18,7 @@ $(document).ready( function() {
 			var dateObj = new Date(); //create new date object
 			var monthArr = ["January", "February" , "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 			var currHour = dateObj.getHours() % 12; //current hour
-			var date = currHour + ":" + dateObj.getMinutes() + ",     " + monthArr[dateObj.getMonth()] + " " + dateObj.getDate(); //get hours, min, day, month
+			var date = currHour + ":" + dateObj.getMinutes() + ", " + monthArr[dateObj.getMonth()] + " " + dateObj.getDate(); //get hours, min, day, month
 			var isFahrenheit = true; //create variable to check if temp is in fahrenheit or celcius
 
 			var body  = document.getElementsByTagName("body")[0]; //access body element
@@ -70,7 +70,10 @@ $(document).ready( function() {
 					var classTemp = ".temp" + i;
 					var classSumm = ".summary" + i;
 
-					var hour = currHour + i;
+					var hour = (currHour + i) % 12;
+					if(hour == 0) {
+						hour = 12;
+					}
 					$(classHr).text(hour + " o'clock");
 
 					$(classTemp).text(hourlyTemps[i] + " °F");
@@ -78,6 +81,34 @@ $(document).ready( function() {
 				}
 
 				$("#hr").show();
+				var isFahrHr = true
+
+				$("#celciusHr").click(function(event) {
+					if(isFahrenheit) { //check if temp is in degrees fahrenheit
+						for(i = 1; i < 7; i++) {
+							hourlyTemps[i] = (hourlyTemps[i] - 32) * 5/9; //convert function to celcius from fahrenheit
+							hourlyTemps[i] = hourlyTemps[i].toFixed(1);
+							var classTempHr = ".temp" + i;
+
+							$(classTempHr).text(hourlyTemps[i] + "°C");
+							isFahrenheit = false;
+						}
+					}
+				});
+
+				$("#fahrHr").click(function(event) {
+					if(!isFahrenheit) { //check if temp is in degrees fahrenheit
+
+						for(i = 1; i < 7; i++) {
+							hourlyTemps[i] = (hourlyTemps[i] * 9/5) + 32; //convert function to celcius from fahrenheit
+							hourlyTemps[i] = hourlyTemps[i].toFixed(1);
+							var classTempHr = ".temp" + i;
+
+							$(classTempHr).text(hourlyTemps[i] + "°F");
+							isFahrenheit = true;
+						}
+					}
+				});
 			});
 
 		});

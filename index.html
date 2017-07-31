@@ -31,15 +31,19 @@
 
 
       <div class = "jumbotron container">
-
-        <h4>
-          <div class = "col-lg-2 col-md-2 col-sm-2 data" id = "date">Date</div>
-          <div class = "col-lg-4 col-md-4 col-sm-4 data" id = "temp">Temp</div>
-          <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "weather">Weather</div>
-          <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "humidity">Humidity</div>
-          <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "precip">Precip</div>
-        </h4>
-
+        <div class = "table-responsive">
+          <h4>
+            <div class = "col-lg-4 col-md-4 col-sm-4 data" id = "date">Date</div>
+            <em><div class = "col-lg-4 col-md-4 col-sm-4 data" id = "temp">Temp</div></em>
+            </br>
+            </br>
+            <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "weather">Weather</div>
+            </br>
+            <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "humidity">Humidity</div>
+            </br>
+            <div class = "col-lg-6 col-md-6 col-sm-6 data" id = "precip">Precip</div>
+          </h4>
+        </div>
         <div class = "col-lg-8 col-md-8 col-sm-8">
 
           <button class = "btn btn-primary" id = "celcius">C</button>
@@ -56,6 +60,14 @@
         <h1 class= "col-lg-9 col-md-9 col-sm-9">Next 6 Hours:</h1>
 
         <button class = "btn btn-warning col-lg-3 col-md-3 col-sm-3 " id = "hourly">H</button>
+
+        <div class = "col-lg-8 col-md-8 col-sm-8">
+
+          <button class = "btn btn-primary" id = "celciusHr">°C</button>
+
+          <button class = "btn btn-success" id = "fahrHr">°F</button>
+
+        </div>
 
         <div class = "row col-lg-12 col-md-12 col-sm-12" id = "hr">
 
@@ -105,6 +117,17 @@
 
     </div>
 
+    <div class = "container">
+      <footer class="white-text black text-center full">
+        Written and &ltCoded&gt by Mohammad Nadeem<br/>
+
+        <a href="https://github.com/mnadev"><i class="fa fa-github-square fa-2x"></i></a>
+
+        <a href="https://www.linkedin.com/in/mohammed-nadeem-a01714126"><i class="fa fa-linkedin fa-2x"></i></a>
+      </footer>
+    </div>
+
+    <script src="https://use.fontawesome.com/d07ee181db.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="js/config.js"></script>
     <script src="js/index.js"></script>
