@@ -30,9 +30,9 @@ $(document).ready( function() {
 
 			$('#weather').html("The weather is " + weather);
 
-			$("#humidity").text(humidity + "% humidity");
+			$("#humidity").text(humidity.toFixed(1) + "% humidity");
 
-			$("#precip").text(precipChance + "% precipitation chance");
+			$("#precip").text(precipChance.toFixed(1) + "% precipitation chance");
 
 			$("#celcius").text("°C");
 
@@ -64,7 +64,7 @@ $(document).ready( function() {
 				var hourlySummary = new Array(6);
 
 				for(var i = 1; i < 7; i++) { //iterate through each hour, getting data
-					hourlyTemps[i] = hourlyData[i].temperature;
+					hourlyTemps[i] = hourlyData[i].temperature.toFixed(1);
 					hourlySummary[i] = hourlyData[i].summary;
 					var classHr = ".hour" + i; //html classes for each hour
 					var classTemp = ".temp" + i;
